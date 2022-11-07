@@ -19,7 +19,7 @@
 
 <p>• Install the latest version of Python -> <a href="https://www.python.org/downloads/" target="_blank"><i>here</i></a>
 
-<p>• Type in console -> <code>pip3 install aiogram pymongo flask python-dotenv</code></p>
+<p>• Type in console -> <code>pip3 install aiogram pymongo flask dotenv</code></p>
 
 # ▹ Run #
 
