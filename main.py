@@ -3,7 +3,6 @@
 #  Github: alexndrev
 #  Telegram: alexndrev
 # = = = = = = = = = = = = = = = = = = = = = = =
-import os
 from aiogram import Bot, Dispatcher, executor
 from config.keep_alive import keep_alive
 from handlers.admin.admin_menu import *
