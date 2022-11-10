@@ -16,14 +16,20 @@
 - [ ] Earn candies
 
 # ▹ Installation #
-
-<p>• Install the latest version of Python -> <a href="https://www.python.org/downloads/" target="_blank"><i>here</i></a>
-
-<p>• Type in console -> <code>pip3 install aiogram pymongo flask dotenv</code></p>
+> [!NOTE]  
+> For start make sure you have python 3.10+ installed on your machine.
+``` Bash
+$ git clone https://github.com/alexndrev/senior-moderate-bot
+$ cd senior-moderate-bot
+$ python3 -m venv .venv
+$ .venv/bin/activate
+$ pip3 install -r requirements.txt
+```
 
 # ▹ Run #
-
-<p>• Type in console -> <code>cd senior-moderate-bot && python3 main.py</code></p>
+``` Bash
+$ python3 main.py
+```
 
 # ▹ Links #
 
