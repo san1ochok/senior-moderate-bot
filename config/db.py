@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 from datetime import datetime
 
-USER_KEY = 'alexndrev'
-PASS_KEY = '38J5J-5-!bnK6ff'
+USER_KEY = ''
+PASS_KEY = ''
 DB_NAME = 'users'
 
 cluster = MongoClient(
