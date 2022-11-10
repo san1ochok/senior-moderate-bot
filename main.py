@@ -24,7 +24,7 @@ import json
 
 keep_alive()
 storage = MemoryStorage()
-bot = Bot(token=token, parse_mode=parse_mode)
+bot = Bot(token=TOKEN, parse_mode=PARSE_MODE)
 dp = Dispatcher(bot, storage=storage)
 
 register_handlers_static(dp)
