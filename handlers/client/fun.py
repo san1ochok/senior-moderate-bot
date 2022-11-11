@@ -1,4 +1,4 @@
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from config.config import *
 from config.db import *
@@ -6,7 +6,7 @@ from config.db import *
 from keyboards.admin.inlines import *
 
 storage = MemoryStorage()
-bot = Bot(token=token, parse_mode=parse_mode)
+bot = Bot(token=TOKEN, parse_mode=PARSE_MODE)
 dp = Dispatcher(bot, storage=storage)
 
 
@@ -49,14 +49,14 @@ async def intimCommand(message):
     l11n = get_localization(message.chat.id)
     match l11n:
         case 'uk':
-            if message.reply_to_message.from_user.id == admin:
+            if message.reply_to_message.from_user.id == ADMIN:
                 await message.answer('Ай-ай-ай, пустуня')
             else:
                 await message.reply(
                     f"<b><a href='tg://user?id={message.from_user.id}'>{message.from_user.first_name}</a></b> примусив до інтиму <b><a href='tg://user?id={message.reply_to_message.from_user.id}'>{message.reply_to_message.from_user.first_name}</a></b> ❤️‍🔥",
                     parse_mode="html")
         case _:
-            if message.reply_to_message.from_user.id == admin:
+            if message.reply_to_message.from_user.id == ADMIN:
                 await message.answer('Ай-ай-ай, шалунишка')
             else:
                 await message.reply(
@@ -71,14 +71,14 @@ async def killCommand(message):
     l11n = get_localization(message.chat.id)
     match l11n:
         case 'uk':
-            if message.reply_to_message.from_user.id == admin:
+            if message.reply_to_message.from_user.id == ADMIN:
                 await message.answer('Ай-ай-ай, фу так робити')
             else:
                 await message.reply(
                     f"<b><a href='tg://user?id={message.from_user.id}'>{message.from_user.first_name}</a></b> вбив <b><a href='tg://user?id={message.reply_to_message.from_user.id}'>{message.reply_to_message.from_user.first_name}</a></b> 🔫",
                     parse_mode="html")
         case _:
-            if message.reply_to_message.from_user.id == admin:
+            if message.reply_to_message.from_user.id == ADMIN:
                 await message.answer('Ай-ай-ай, фу так делать')
             else:
                 await message.reply(

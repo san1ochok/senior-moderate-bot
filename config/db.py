@@ -1,13 +1,14 @@
 from pymongo import MongoClient
 from datetime import datetime
 
-USER_KEY = ''
-PASS_KEY = ''
-DB_NAME = 'users'
+from config.config import (
+    MONGO_URI,
+    DATABASE
+)
 
-cluster = MongoClient(
-    f"mongodb+srv://{USER_KEY}:{PASS_KEY}@dbcluster.seht02t.mongodb.net/{DB_NAME}?retryWrites=true&w=majority")
-db = cluster[f"{DB_NAME}"]
+
+cluster = MongoClient(MONGO_URI)
+db = cluster[f"{DATABASE}"]
 
 
 def CreateDB(group_id):

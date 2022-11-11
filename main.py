@@ -3,7 +3,6 @@
 #  Github: alexndrev
 #  Telegram: alexndrev
 # = = = = = = = = = = = = = = = = = = = = = = =
-import os
 from aiogram import Bot, Dispatcher, executor
 from config.keep_alive import keep_alive
 from handlers.admin.admin_menu import *
@@ -25,7 +24,7 @@ import json
 
 keep_alive()
 storage = MemoryStorage()
-bot = Bot(token=token, parse_mode=parse_mode)
+bot = Bot(token=TOKEN, parse_mode=PARSE_MODE)
 dp = Dispatcher(bot, storage=storage)
 
 register_handlers_static(dp)

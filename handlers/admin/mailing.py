@@ -8,13 +8,13 @@ from keyboards.admin.inlines import *
 from states.mailing import BotMailing
 
 storage = MemoryStorage()
-bot = Bot(token, parse_mode='markdown')
+bot = Bot(TOKEN, parse_mode='markdown')
 dp = Dispatcher(bot, storage=storage)
 
 
 @dp.message_handler(text='Рассылка 📧')
 async def start_mailing(message):
-    if message.from_user.id != admin:
+    if message.from_user.id != ADMIN:
         await message.answer(f'⚡ Введи текст для розсилки з *Markdown-маркуванням*')
         await BotMailing.text.set()
     else:

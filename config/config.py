@@ -3,10 +3,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-admin = os.getenv("ADMIN_ID")
-group = os.getenv("GROUP_ID")
-token = os.getenv("AUTH_TOKEN")
-parse_mode = 'Markdown'
+ADMIN = os.getenv("ADMIN_ID")
+GROUP = os.getenv("GROUP_ID")
+TOKEN = os.getenv("AUTH_TOKEN")
+DATABASE = os.getenv("DATABASE")
+MONGO_URI = os.getenv("AUTH_TOKEN")
+
+
+PARSE_MODE = 'Markdown'
 
 
 
